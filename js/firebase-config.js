@@ -11,8 +11,3 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 firebase.firestore().settings({ timestampsInSnapshosts: true});
-firebase.auth().onAuthStateChanged(user=>{
-    if(!user) {
-      window.location='./login.html';
-    }
-});
