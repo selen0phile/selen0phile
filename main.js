@@ -27,10 +27,15 @@ firebase.auth().onAuthStateChanged(user=>{
 });
 
 //router
+const router=(controller,context) => {
+  const cmd=`new ${controller}_controller('${context}');`
+  console.log(cmd);
+  eval(cmd);
+};
 window.onhashchange=()=> {
   const route=window.location.hash.substr(1);
   console.log(route);
   if(route=='' || route=='index') return;
-  const cmd=`new ${route}_controller(new ${route}_model(),new ${route}_view());`
-  eval(cmd);
+  router(route,null);
 };
+window.location.hash='';
