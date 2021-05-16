@@ -7,3 +7,16 @@ body {
               user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome, Edge, Opera and Firefox */
   }
+.clearfix:before,
+.clearfix:after {
+ content: "";
+ display: table;
+ }
+
+.clearfix:after {
+ clear: both;
+ }
+
+.clearfix {
+ zoom: 1; /* ie 6/7 */
+}

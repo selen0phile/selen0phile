@@ -5,10 +5,13 @@ class profile_controller {
         if(context=='update') {
             model.update(this.get_form_data());
         }
-        const view = new profile_view(model.read());
-        const html = view.get_view();
-        //render
-        document.getElementById('profile-view').innerHTML=html;
+        model.read().then(model_data=>{
+            console.log(model_data);
+            const view = new profile_view(model_data);
+            const html = view.get_view();
+            //render
+            document.getElementById('profile-view').innerHTML=html;
+        });
     }
     get_form_data() {
         let data=[];

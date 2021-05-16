@@ -1,12 +1,18 @@
 class profile_model {
     constructor() {
     }
-    read() {
-        return firebase.auth().currentUser;
+    async read() {
+        const user=firebase.auth().currentUser;
+        return new Promise(function(resolve, reject){
+            firebase.firestore().collection('users').doc(user.uid).get().then(doc=>{
+                resolve(doc.data());
+            }).catch(error=>{
+                console.log(error);
+            });
+        });
     }
     update(data) {
-        console.log(data);
-        firebase.auth().currentUser.updateProfile(data);
-        firebase.auth().currentUser.update
+        const user=firebase.auth().currentUser;
+        firebase.firestore().collection('users').doc(user.uid).set(data);
     }
 }

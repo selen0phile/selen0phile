@@ -7,12 +7,7 @@ class map_controller {
             const html = view.get_view();
             //render
             document.getElementById('map-view').innerHTML=html;
-            function myMap() {
-                var mapProp= {
-                  center:new google.maps.LatLng(51.508742,-0.120850),
-                  zoom:5,
-            };
-            var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+            setTimeout(view.initMap(),2000);
         });
     }
     get_form_data() {

@@ -26,11 +26,6 @@ class symptoms_view {
             <a class="waves-effect waves-light btn" onclick="router('symptoms','update')">Update</a>
         </form>
     </div>
-    
-    
-
-
-
 
 
 `;
