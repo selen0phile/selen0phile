@@ -17,11 +17,11 @@ class profile_view {
             <label for="">Phone</label>
             <input type="text" id="phoneNumber" value="${this.context.phoneNumber}"/>
             <label for="">Gender</label>
-            <input type="text" id="phoneNumber" value="${this.context.gender}"/>
+            <input type="text" id="gender" value="${this.context.gender}"/>
             <label for="">Blood Group</label>
-            <input type="text" id="phoneNumber" value="${this.context.bg}"/>
+            <input type="text" id="bg" value="${this.context.bg}"/>
             <label for="">Location</label>
-            <input class="hidden" type="text" id="phoneNumber" value="${this.context.location}"/>
+            <input class="" type="text" id="location" value="${this.context.location}"/>
             <a class="waves-effect waves-light btn" style="" onclick="router('profile','location')">Get Location</a>
             <br>
             <a class="waves-effect waves-light btn" onclick="router('profile','update')">Update</a>
