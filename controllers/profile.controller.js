@@ -9,9 +9,11 @@ class profile_controller {
             if (navigator.geolocation) navigator.geolocation.getCurrentPosition((pos)=>{
                 const position=pos.coords.latitude+','+pos.coords.longitude;
                 document.getElementById('location').value=position;
-                fetch('http://api.positionstack.com/v1/reverse?access_key=cd6904b6484889c007c299fa33ab553b&query='+position)
+                var url='https://us1.locationiq.com/v1/reverse.php?key=pk.2c2132990ea7c2f3cb79d6cd71dea449&lat='+pos.coords.latitude+'&lon='+pos.coords.longitude+'&format=json';
+                console.log(url);
+                fetch(url)
                 .then(response => response.json())
-                .then(data => document.getElementById('location').value=data.data[0]['name']);
+                .then(data => document.getElementById('location').value=data.display_name);
             },(err)=>{
 
             });
