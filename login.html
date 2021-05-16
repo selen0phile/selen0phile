@@ -16,6 +16,7 @@
             firebase.auth().signInWithPopup(googleProvider)
             .then(()=>{
                 console.log('Done');
+                window.location('/');
             })
             .catch(err=>{
                 console.log(err);
