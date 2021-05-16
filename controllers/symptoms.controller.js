@@ -1,5 +1,6 @@
 class symptoms_controller {
     constructor(context) {
+        /*
         this.context=context
         const model = new symptoms_model();
         if(context=='update') {
@@ -12,6 +13,8 @@ class symptoms_controller {
             //render
             document.getElementById('symptoms-view').innerHTML=html;
         });
+        */
+       document.getElementById('symptoms-view').innerHTML='<iframe src="https://symptomate.com/covid19/checkup/#0-99990"></frame>';
     }
     get_form_data() {
         let data={};
