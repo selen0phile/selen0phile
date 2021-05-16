@@ -1,6 +1,10 @@
-class profile_view {
+class symptoms_view {
     constructor(context) {
-        this.context=context;
+        if(typeof context=='undefined') this.context={a:'',b:'',c:'',d:'',location:''};
+        else {
+            this.context=context;
+            console.log(context);
+        }
     }
     get_view() {
         return `
@@ -8,13 +12,21 @@ class profile_view {
 
         <div>
         <form>
-            <label for="">Name</label>
-            <input type="text" id="displayName" value="${this.context.displayName}"/>
-            <label for="">Phone</label>
-            <input type="text" id="phoneNumber" value="${this.context.phoneNumber}"/>
-            <a class="waves-effect waves-light btn" onclick="router('profile','update')">Update</a>
+            <label for="">A</label>
+            <input type="text" id="a" value="${this.context.a}"/>
+            <label for="">B</label>
+            <input type="text" id="b" value="${this.context.b}"/>
+            <label for="">C</label>
+            <input type="text" id="c" value="${this.context.c}"/>
+            <label for="">D</label>
+            <input type="text" id="d" value="${this.context.d}"/>
+            <label for="">Location</label>
+            <input type="text" id="location" value="${this.context.location}"/>
+    
+            <a class="waves-effect waves-light btn" onclick="router('symptoms','update')">Update</a>
         </form>
     </div>
+    
     
 
 

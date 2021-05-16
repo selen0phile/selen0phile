@@ -28,6 +28,11 @@ firebase.auth().onAuthStateChanged(user=>{
 
 //router
 const router=(controller,context) => {
+  var controllers=['profile','symptoms','map'];
+  controllers.forEach(c=>{
+    if(c==controller) document.getElementById(c+'-view').classList.remove("hidden");
+    else document.getElementById(c+'-view').classList.add("hidden");
+  });
   const cmd=`new ${controller}_controller('${context}');`
   console.log(cmd);
   eval(cmd);

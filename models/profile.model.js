@@ -7,5 +7,6 @@ class profile_model {
     update(data) {
         console.log(data);
         firebase.auth().currentUser.updateProfile(data);
+        firebase.auth().currentUser.update
     }
 }

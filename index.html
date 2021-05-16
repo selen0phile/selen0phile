@@ -19,6 +19,14 @@
     <script src="models/profile.model.js"></script>
     <script src="controllers/profile.controller.js"></script>
 
+    <script src="views/symptoms.view.js"></script>
+    <script src="models/symptoms.model.js"></script>
+    <script src="controllers/symptoms.controller.js"></script>
+
+    <script src="views/map.view.js"></script>
+    <script src="models/map.model.js"></script>
+    <script src="controllers/map.controller.js"></script>
+
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/main.css">
 
@@ -50,20 +58,26 @@
             </div>
             <div class="text-white text-lg sidebar-nav">
                 <div class="waves-effect waves-light h-16 w-full bg-gray-600 bg-opacity-40 hover:bg-red-500 hover:bg-opacity-60 flex items-center pl-7">
-                    Live Map
+                    <a href="#map">Live Map</a>
                 </div>
                 <div class="waves-effect waves-light h-16 w-full bg-gray-200 bg-opacity-40 hover:bg-purple-500 hover:bg-opacity-60 flex items-center pl-7">
-                    Submit Symptomes
+                    <a href="#symptoms">Symptomes</a>
                 </div>
                 <div class="waves-effect waves-light h-16 w-full bg-gray-200 bg-opacity-40 hover:bg-green-500 hover:bg-opacity-60 flex items-center pl-7">
-                    Info Panel
+                    <a href="#info">Info Panel</a> 
                 </div>
             </div>
         </div>
         <div class="flex-1 p-10 text-2xl font-bold">
             <div id="profile-view" class="">
-                content goes here
-            </div>            
+                profile goes here
+            </div>
+            <div id="symptoms-view" class="">
+                symptoms here
+            </div>
+            <div id="map-view">
+                map goes here
+            </div>
         </div>
     </div>
 </body>
